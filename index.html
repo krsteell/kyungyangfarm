@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>경량팜 | 건축자재 전문 쇼핑몰</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,"Malgun Gothic",sans-serif;color:#26372e;background:#fff}
+header{padding:20px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee}
+.logo{font-size:28px;font-weight:900;color:#294535}
+nav a{margin-left:18px;color:#35483b;text-decoration:none;font-size:14px}
+.hero{background:#263e30;color:white;padding:75px 7%;text-align:left}
+.hero h1{font-size:38px;line-height:1.4;margin:0 0 15px}
+.hero p{color:#dce6dd;line-height:1.8}
+.wrap{max-width:1100px;margin:auto;padding:45px 20px}
+h2{font-size:25px;margin-bottom:25px}
+.categories,.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:15px}
+.category,.product{border:1px solid #e5e9e5;border-radius:12px;padding:20px;background:#fff}
+.category{background:#f3f6f2;font-weight:bold;text-align:center}
+.product h3{font-size:17px}
+.product p{font-size:13px;color:#718076;line-height:1.7}
+.product button,.contact button{background:#304b38;color:white;border:0;border-radius:7px;padding:11px 15px;cursor:pointer}
+.notice{background:#f1f4ef;padding:25px;border-radius:12px;line-height:1.9}
+.contact{background:#263e30;color:white;padding:35px;text-align:center}
+footer{background:#192a20;color:#dce5dd;padding:25px;text-align:center;font-size:13px;line-height:2}
+button:focus,a:focus{outline:2px solid #79977f}
+@media(max-width:600px){
+ header{padding:16px;flex-wrap:wrap;gap:12px}
+ nav a{margin-left:9px;font-size:12px}
+ .hero{padding:55px 22px}
+ .hero h1{font-size:29px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">경량팜</div>
+  <nav>
+    <a href="#category">상품</a>
+    <a href="#products">인기상품</a>
+    <a href="#contact">견적문의</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>건축자재의 새로운 기준<br>경량팜</h1>
+  <p>엠바 · 스터드 · 런너 · 석고보드 · 석고텍스<br>
+  좋은 자재를 합리적으로 만나보세요.</p>
+  <a href="#category" style="display:inline-block;background:white;color:#263e30;padding:13px 20px;border-radius:7px;text-decoration:none;font-weight:bold">상품 둘러보기</a>
+</section>
+
+<main class="wrap">
+  <section id="category">
+    <h2>상품 카테고리</h2>
+    <div class="categories">
+      <div class="category">엠바</div>
+      <div class="category">스터드</div>
+      <div class="category">런너</div>
+      <div class="category">석고보드</div>
+      <div class="category">석고텍스</div>
+    </div>
+  </section>
+
+  <section id="products" style="margin-top:55px">
+    <h2>주요 취급 상품</h2>
+    <div class="products">
+      <article class="product">
+        <h3>엠바</h3>
+        <p>규격 및 두께별 상품<br>대량 구매 견적 가능</p>
+        <button onclick="inquiry('엠바')">견적 문의</button>
+      </article>
+      <article class="product">
+        <h3>스터드</h3>
+        <p>다양한 규격의 스터드<br>상세 사양 확인 가능</p>
+        <button onclick="inquiry('스터드')">견적 문의</button>
+      </article>
+      <article class="product">
+        <h3>런너</h3>
+        <p>현장 조건별 제품 상담<br>수량별 견적 안내</p>
+        <button onclick="inquiry('런너')">견적 문의</button>
+      </article>
+      <article class="product">
+        <h3>석고보드</h3>
+        <p>종류 및 두께별 상품<br>배송 상담 가능</p>
+        <button onclick="inquiry('석고보드')">견적 문의</button>
+      </article>
+      <article class="product">
+        <h3>석고텍스</h3>
+        <p>규격 및 포장 단위별 상담<br>화물 배송 문의</p>
+        <button onclick="inquiry('석고텍스')">견적 문의</button>
+      </article>
+    </div>
+  </section>
+
+  <section style="margin-top:55px">
+    <div class="notice">
+      <h2>배송 및 구매 안내</h2>
+      · 전국 배송 상담 가능합니다.<br>
+      · 상품에 따라 택배 또는 화물 배송으로 진행됩니다.<br>
+      · 대량 주문은 별도 견적을 안내합니다.<br>
+      · 무통장입금 계좌는 주문 확인 후 안내합니다.
+    </div>
+  </section>
+</main>
+
+<section class="contact" id="contact">
+  <h2>대량 구매 및 상품 견적 문의</h2>
+  <p>상품명, 규격, 수량을 알려주세요.</p>
+  <h2>02-2671-8590</h2>
+  <button onclick="location.href='tel:0226718590'">전화 문의하기</button>
+</section>
+
+<footer>
+  <strong>경량팜</strong><br>
+  운영 사업자: (주)경량스틸<br>
+  고객센터: 02-2671-8590<br>
+  건축자재 전문 온라인 쇼핑몰
+</footer>
+
+<script>
+function inquiry(product){
+  location.href='tel:0226718590';
+}
+</script>
+</body>
+</html>
